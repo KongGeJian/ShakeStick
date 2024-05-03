@@ -47,7 +47,7 @@ typedef struct
 #define K1 P32      //功能
 
 /**扫描周期（单位 ms）**/
-#define K_SCAN_CYCLE       20 //原值10ms
+#define K_SCAN_CYCLE       10 //原值10ms
 
 /**按键计数定义**/
 #define K_CNT_SHAKE        20/K_SCAN_CYCLE //消抖20ms
@@ -55,8 +55,8 @@ typedef struct
 #define K_CNT_REP_END    1000/K_SCAN_CYCLE //按下1s不放为重复键
 #define K_CNT_LONG_PRESS 2000/K_SCAN_CYCLE //按下2s不放为长按
 
-static KEY_STATE_TYP xdata k_s[NR_K];      //按键状态
-static u8            xdata key_code[NR_K]; //按键码
+static KEY_STATE_TYP idata k_s[NR_K];      //按键状态
+static u8            idata key_code[NR_K]; //按键码
 
 
 

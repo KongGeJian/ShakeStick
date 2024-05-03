@@ -101,11 +101,34 @@ void water_02()
     }
 }
 
+//闪烁灯1：
+void flash_01()
+{
+    P0 = 0x00;
+    P2 = 0xFF;
+    delay_ms(200);
+    P0 = 0xFF;
+    P2 = 0x00;
+    delay_ms(200);
+}
+
+//闪烁灯2：
+void flash_02()
+{
+    P0 = 0xAA;
+    P2 = math_reverse(0xAA);
+    delay_ms(200);
+    P0 = 0x55;
+    P2 = math_reverse(0x55);
+    delay_ms(200);
+}
 
 //注册
 static LEDModeHook led_mode_arr[] = {
     water_01,
     water_02,
+    flash_01,
+    flash_02,
 };
 
 /*

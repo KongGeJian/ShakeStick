@@ -17,6 +17,7 @@
 */
 #include <limits.h>
 #include <math.h>
+#include <stdlib.h>
 
 #include "lib_stdint.h"
 
@@ -50,6 +51,8 @@ extern s16  math_imin(s16 a, s16 b);
 extern u16  math_uimin(u16 a, u16 b);
 extern s16  math_imax(s16 a, s16 b);
 extern u16  math_uimax(u16 a, u16 b);
+
+extern u16  math_random(u16 seed, u16 max, u16 min);
 
 extern u8   math_hamming(byte n);
 extern byte math_reverse(byte x);
