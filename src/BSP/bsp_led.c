@@ -123,12 +123,25 @@ void flash_02()
     delay_ms(200);
 }
 
+//闪烁灯3：
+void flash_03()
+{
+    P0 = 0xCC;
+    P2 = math_reverse(0xCC);
+    delay_ms(200);
+    P0 = 0x33;
+    P2 = math_reverse(0x33);
+    delay_ms(200);
+}
+
+
 //注册
 static LEDModeHook led_mode_arr[] = {
     water_01,
     water_02,
     flash_01,
     flash_02,
+    flash_03,
 };
 
 /*
